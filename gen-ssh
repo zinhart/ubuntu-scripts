@@ -1,0 +1,11 @@
+#A simply script to automate memory leak checking, this script does NOT take into account symbolic links
+if [ $# -eq 0 ]
+then
+echo -e "USAGE: $0 <email>"
+#possible future options here
+fi
+
+if [ $# -eq 1 ]
+then
+ssh-keygen -t rsa -b 4096 -C $1
+fi
